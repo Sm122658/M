@@ -1,20 +1,13 @@
-def factorial(n):
+def linearSearchProduct(productList, targetProduct):
+  indices = []
 
-  # Checking the number
-  # is 1 or 0 then
-  # return 1
-  # other wise return
-  # factorial
-  if (n == 1 or n == 0):
-
-    return 1
-
-  else:
-
-    return (n * factorial(n - 1))
+  for index, product in enumerate(productList):
+    if product == targetProduct:
+      indices.append(index)
+  return indices
 
 
-# Driver Code
-num = 5
-print("number : ", num)
-print("Factorial : ", factorial(num))
+products = ["shoes", "boot", "loafer", "shoes", "sandal", "shoes"]
+target = "shoes"
+result = linearSearchProduct(products, target)
+print(result)
